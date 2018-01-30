@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 import FriendListContainer from '../containers/FriendListContainer';
+import store from '../store';
+import { getAllFriends } from '../actions';
 
 import './Application.css';
 
@@ -11,6 +13,10 @@ class Application extends Component {
         <FriendListContainer />
       </div>
     );
+  }
+
+  componentDidMount() {
+    store.dispatch(getAllFriends());
   }
 }
 

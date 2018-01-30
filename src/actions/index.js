@@ -1,4 +1,15 @@
-import { REQUEST_NEW_FRIEND, ADD_FRIEND_TO_LIST } from '../constants';
+import { REQUEST_NEW_FRIEND, ADD_FRIEND_TO_LIST, FETCH_FRIENDS, UPDATE_FRIENDS } from '../constants';
+
+export const getAllFriends = () => {  
+  return {
+    type: FETCH_FRIENDS
+  };
+};
+
+export const updateFriends = friends => ({
+  type: UPDATE_FRIENDS,
+  friends,
+});
 
 export const requestNewFriend = () => {
   return {
